@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Search from './components/Search';
+import SearchResult from './components/SearchResult';
+import { TMDB_API_URL, tmdbApiOptions } from './components/api'
+import MovieResult from './components/MoviesResult';
 
 function App() {
+  const [result, setResult] = useState(null)
+
+  const handleOnSearchChange = (searchData) => {
+    const searchResult = JSON.parse(searchData.value)
+    fetch(`${TMDB_API_URL}?query=${searchResult.title || searchResult.name}&include_adult=false&page=1`, tmdbApiOptions)
+      .then(response => response.json())
+      .then(response => setResult(response.results[0]))
+      .catch(err => console.error('error:' + err));
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Search onSearchChange={handleOnSearchChange} />
+      {result && <SearchResult data={result} />}
+      {result && <MovieResult data={result}/>}
     </div>
   );
 }
