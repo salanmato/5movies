@@ -18,6 +18,7 @@ function App() {
 
   return (
     <div className="container">
+      <img className='logo' src='/logo/logo.png' alt='5movies logo'/>
       <Search onSearchChange={handleOnSearchChange} />
       {result && <SearchResult data={result} />}
       {result && <MovieResult data={result}/>}

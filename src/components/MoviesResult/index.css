@@ -1,3 +1,59 @@
-.small-poster{
-    width: 150px;
+.recommendations-title {
+    font-size: 60px;
+    font-weight: 600;
+    justify-content: center;
+    color: antiquewhite;
+
+
+}
+
+.recommendations {
+    margin-top: -80px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.movie-item {
+    max-width: 600px;
+    max-height: 300px;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    margin: auto;
+    margin-bottom: 20px;
+    display: flex;
+    box-shadow: 10px -2px 20px 2px rgba(0 0 0 / 30%);}
+
+.small-poster {
+    height: 300px;
+    border-radius: 0 0 10px 0;
+}
+
+.movie-info {
+    display: block;
+    text-align: left;
+    overflow: hidden;
+    height: 295px;
+    margin: 0 10px;
+}
+
+.movie-info .movie-title {
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: -02px;
+}
+
+
+
+.movie-info .movie-release-date {
+    margin-top: -20px;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.movie-info .movie-overview {
+    margin-top: -20px;
+    font-size: 20px;
+    font-weight: 300;
 }

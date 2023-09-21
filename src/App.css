@@ -1,4 +1,14 @@
 .container {
   max-width: 670px;
-  margin: -20px auto;
+  margin: -100px auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .logo{
+  width: 600px;
+  display: block;
+  margin-left: 5%;
+  margin-top: 200px;
+  
 }

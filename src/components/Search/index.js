@@ -34,7 +34,7 @@ const Search = ({ onSearchChange }) => {
             borderRadius: '5px',
             border: '2px solid grey',
             boxShadow: state.isFocused ? '0 0 0 2px grey' : null,
-            marginTop: '200px',
+            marginTop: '50px',
             height: '50px',
             fontSize: '24px',
             

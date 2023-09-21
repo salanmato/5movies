@@ -9,7 +9,7 @@ const GetMovieList = (data, idx) => {
     if (data.media_type === 'person') {
         fetch(`${TMDB_PERSON_INFO}${data.id}/movie_credits`, tmdbApiOptions)
             .then(res => res.json())
-            .then(json => setMovie(json.cast[idx]))
+            .then(json => setMovie(json.cast.length > json.crew.length ? json.cast[idx] : json.crew[idx]))
             .catch(err => console.error('error:' + err))
     }
 
@@ -19,7 +19,7 @@ const GetMovieList = (data, idx) => {
             .then(json => setMovie(json.results[idx]))
             .catch(err => console.error('error:' + err))
     }
-
+    console.log(movie)
     return movie
 }
 
