@@ -19,7 +19,6 @@ const GetMovieList = (data, idx) => {
             .then(json => setMovie(json.results[idx]))
             .catch(err => console.error('error:' + err))
     }
-    console.log(movie)
     return movie
 }
 

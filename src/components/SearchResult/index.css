@@ -2,11 +2,11 @@
     box-sizing: border-box;
     max-width: 600px;
     height: 400px;
-    background-color: darkslategrey;
+    background-color: #F7931E;
     border-radius: 10px;
     box-shadow: 10px -2px 20px 2px rgba(0 0 0 / 30%);
     margin: 100px auto;
-    color: antiquewhite;
+    color: #272626;
     display: flex;
     justify-content: space-between;
 }
