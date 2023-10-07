@@ -22,6 +22,7 @@ function App() {
       <Search onSearchChange={handleOnSearchChange} />
       {result && <SearchResult data={result} />}
       {result && <MovieResult data={result}/>}
+      <a href='https://www.themoviedb.org/' className='tmdb-link'><p>data from tmdb</p></a>
     </div>
   );
 }

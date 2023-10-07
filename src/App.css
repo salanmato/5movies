@@ -5,10 +5,23 @@
   justify-content: center;
 }
 
-.container .logo{
+.container .logo {
   width: 600px;
   display: block;
   margin-left: 5%;
   margin-top: 200px;
-  
+
+}
+
+.tmdb-link{
+  text-align: center;
+  text-decoration: none;
+  color: antiquewhite;
+  font-size: 20px;
+  transition: all ease-in-out 0.2s;
+}
+
+.tmdb-link:hover{
+  cursor: pointer;
+  color: #F7931E;
 }
